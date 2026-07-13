@@ -60,20 +60,20 @@
 ## 🚀 Quick Installation
 
 ```bash
-# Step 1: Clone karo
-git clone https://github.com/yourusername/saas-boilerplate.git
+# Step 1: Clone the repository
+git clone https://github.com/Hemkunwar-Purohit/saas-boilerplate.git
 cd saas-boilerplate
 
-# Step 2: Dependencies install karo
+# Step 2: Install dependencies
 composer install
 
-# Step 3: Environment setup
+# Step 3: Configure environment
 cp .env.example .env
 
 # Step 4: One-command setup
 php artisan saas:install
 
-# Step 5: Server chalao
+# Step 5: Start Server 
 php artisan serve
 ```
 
