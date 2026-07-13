@@ -5,10 +5,10 @@
   <img src="https://img.shields.io/badge/PHP-8.2+-blue?style=flat-square&logo=php" alt="PHP 8.2+">
   <img src="https://img.shields.io/badge/Multi--Tenant-stancl/tenancy-green?style=flat-square" alt="Tenancy">
   <img src="https://img.shields.io/badge/Payments-Stripe+Razorpay-purple?style=flat-square" alt="Payments">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT">
+  <img src="https://img.shields.io/badge/License-yellow?style=flat-square" alt="License">
 </p>
 
-> Complete Laravel 11 SaaS starter kit — Save 200+ hours of development time!
+> Production-ready Laravel 11 SaaS Boilerplate with multi-tenancy, billing, authentication and team management.
 
 ---
 
@@ -60,8 +60,7 @@
 ## 🚀 Quick Installation
 
 ```bash
-# Step 1: Clone the repository
-git clone https://github.com/Hemkunwar-Purohit/saas-boilerplate.git
+# Step 1: Extract the downloaded ZIP
 cd saas-boilerplate
 
 # Step 2: Install dependencies
@@ -189,7 +188,7 @@ saas-boilerplate/
 
 ## 📞 Support
 
-- 📧 Email: your@email.com
+- 📧 Email: hranawat969@gmail.com
 - ⏱️ Response time: Under 24 hours
 - 🔄 Updates: Free lifetime updates
 
@@ -197,4 +196,4 @@ saas-boilerplate/
 
 ## 📄 License
 
-MIT License — Free to use in personal and commercial projects.
+Please refer to Codester licensing terms.
