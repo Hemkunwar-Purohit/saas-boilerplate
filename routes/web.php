@@ -13,7 +13,7 @@ Route::get('/', fn() => view('landing'))->name('home');
 Route::get('/register', [RegisterController::class, 'showForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
-// Single login route — controller decide karega kaunsa view show karna hai
+// Single login route — controller will decide to show which view
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'handleLogin']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

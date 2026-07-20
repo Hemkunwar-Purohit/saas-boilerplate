@@ -19,7 +19,7 @@ class DashboardController extends Controller
             'trial_days_left' => $tenant->onTrial() ? now()->diffInDays($tenant->trial_ends_at) : null,
         ];
 
-        // activity() helper nahi — seedha Activity model use karo
+        
         $recentActivity = Activity::latest()->limit(5)->get();
 
         return view('tenant.dashboard', compact('stats', 'recentActivity'));
