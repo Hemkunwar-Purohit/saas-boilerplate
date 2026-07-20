@@ -17,7 +17,7 @@ class VerifyEmailController extends Controller
         return view('auth.verify-email', ['user' => auth()->user()]);
     }
 
-    // Verify link click karne par
+    // Verify link click 
     public function verify(EmailVerificationRequest $request)
     {
         if (auth()->user()->hasVerifiedEmail()) {

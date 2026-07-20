@@ -16,11 +16,10 @@ class BillingController extends Controller
     {
         $tenant = tenant();
 
-        // Plans central DB mein hain — on() se central connection use karo
+        
         $plans = Plan::on('mysql')->where('is_active', true)->orderBy('sort_order')->get();
 
-        // Current plan bhi central DB se
-        $currentPlan = $tenant->plan_id
+            $currentPlan = $tenant->plan_id
             ? Plan::on('mysql')->find($tenant->plan_id)
             : null;
 
