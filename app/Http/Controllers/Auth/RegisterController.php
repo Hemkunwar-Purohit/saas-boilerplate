@@ -35,7 +35,7 @@ class RegisterController extends Controller
             $tenantId = Str::slug($request->subdomain);
             $domain   = $tenantId . '.localhost';
 
-            // Step 1: Make Tenant + domain 
+            // Step 1: Tenant + domain banao
             $tenant = Tenant::create([
                 'id'        => $tenantId,
                 'name'      => $request->company_name,
@@ -44,17 +44,17 @@ class RegisterController extends Controller
             ]);
             $tenant->domains()->create(['domain' => $domain]);
 
-            // Step 2: switch Tenant in DB
+            // Step 2: Tenant DB mein switch karo
             tenancy()->initialize($tenant);
 
-            // Step 3: Make User — simple, no roles yet
+            // Step 3: User banao — simple, no roles yet
             $user = User::create([
                 'name'     => $request->name,
                 'email'    => $request->email,
                 'password' => Hash::make($request->password),
             ]);
 
-            // Step 4:  insert Role directly from SQL
+            // Step 4: Role directly SQL se insert karo
             $role = DB::table('roles')
                 ->where('name', 'owner')
                 ->where('guard_name', 'web')
@@ -83,7 +83,7 @@ class RegisterController extends Controller
                 ->with('success', 'Welcome! Account created successfully.');
 
         } catch (\Throwable $e) {
-            //  end Tenancy if it initialized
+            // Tenancy end karo agar initialize hua tha
             try { tenancy()->end(); } catch (\Throwable $ignored) {}
 
             return back()

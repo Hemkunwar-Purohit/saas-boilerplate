@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel-saas-boilerplate",
+    "name": "laravel/laravel",
     "type": "project",
-    "description": "Production-ready Laravel multi-tenant SaaS boilerplate.",
+    "description": "The skeleton application for the Laravel framework.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {

@@ -10,11 +10,11 @@ use Illuminate\Validation\ValidationException;
 class LoginController extends Controller
 {
     /**
-     * GET /login — check Tenant or Central and show right view
+     * GET /login — Tenant ya Central check karke sahi view dikhao
      */
     public function showLoginForm()
     {
-        // Tenant is in contex?
+        // Tenant context mein hain?
         if (tenancy()->initialized) {
             return view('auth.tenant-login', ['tenant' => tenant()]);
         }
@@ -22,7 +22,7 @@ class LoginController extends Controller
     }
 
     /**
-     * POST /login — handle Tenant or Central login 
+     * POST /login — Tenant ya Central login handle karo
      */
     public function handleLogin(Request $request)
     {

@@ -37,7 +37,7 @@ class AuthController extends Controller
             ]);
         }
 
-        // revoke old tokens
+        // Purane tokens revoke karo
         $user->tokens()->where('name', $request->device_name ?? 'api')->delete();
 
         $token = $user->createToken($request->device_name ?? 'api');
