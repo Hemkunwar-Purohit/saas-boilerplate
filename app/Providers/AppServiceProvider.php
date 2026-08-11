@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         // Session cookie alag karo — booting() nahi, seedha boot() mein
         try {
             $host         = request()->getHost();
-            $centralHosts = ['127.0.0.1', 'localhost'];
+            $centralHosts = ['hemastudio.online', 'www.hemastudio.online'];
 
             if (!in_array($host, $centralHosts) && str_contains($host, '.')) {
                 $tenantId = explode('.', $host)[0];

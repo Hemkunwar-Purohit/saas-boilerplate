@@ -22,7 +22,7 @@ class EnsureCentralDomain
     public function handle(Request $request, Closure $next)
     {
         $host         = $request->getHost();
-        $centralHosts = ['127.0.0.1', 'localhost'];
+        $centralHosts = ['hemastudio.online', 'www.hemastudio.online'];
 
         // Central domain — sab allow
         if (in_array($host, $centralHosts)) {

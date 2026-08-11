@@ -33,7 +33,7 @@ class RegisterController extends Controller
 
         try {
             $tenantId = Str::slug($request->subdomain);
-            $domain   = $tenantId . '.localhost';
+            $domain = $tenantId . '.hemastudio.online';
 
             // Step 1: Make Tenant + domain 
             $tenant = Tenant::create([
@@ -79,7 +79,7 @@ class RegisterController extends Controller
                 ? ':' . request()->getPort()
                 : '';
 
-            return redirect("http://{$domain}{$port}/")
+            return redirect("https://{$domain}/")
                 ->with('success', 'Welcome! Account created successfully.');
 
         } catch (\Throwable $e) {

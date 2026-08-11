@@ -10,7 +10,7 @@ class InitializeTenancyByDomainEarly
     public function handle(Request $request, Closure $next)
     {
         $host         = $request->getHost();
-        $centralHosts = ['127.0.0.1', 'localhost'];
+        $centralHosts = ['hemastudio.online', 'www.hemastudio.online'];
 
         if (in_array($host, $centralHosts)) {
             return $next($request);

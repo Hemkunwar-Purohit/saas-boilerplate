@@ -12,9 +12,9 @@ return [
 
     // 2. Central domains — tenant identification se exempt
     'central_domains' => [
-        '127.0.0.1',
-        'localhost',
-    ],
+    'hemastudio.online',
+    'www.hemastudio.online',
+],
 
     'bootstrappers' => [
         Stancl\Tenancy\Bootstrappers\DatabaseTenancyBootstrapper::class,
