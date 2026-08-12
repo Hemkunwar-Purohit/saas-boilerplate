@@ -40,7 +40,7 @@
             </div>
             <div class="flex gap-4">
                 <dt class="text-gray-500 w-32">Domain</dt>
-                <dd>{{ $tenant->id }}.localhost</dd>
+                <dd>{{ $tenant->id }}.{{ config('app.domain') }}</dd>
             </div>
         </dl>
     </div>
@@ -54,7 +54,7 @@
             </button>
         </form>
 
-        <a href="http://{{ $tenant->id }}.localhost:8000/dashboard"
+        <a href="http://{{ $tenant->id }}.{{ config('app.domain') }}:8000/dashboard"
            target="_blank"
            class="mt-2 w-full py-2 px-4 rounded-lg text-sm font-medium bg-primary-50 text-primary-600 hover:bg-primary-100 flex items-center justify-center">
             🔗 Open Workspace

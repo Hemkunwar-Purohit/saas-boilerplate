@@ -72,8 +72,8 @@ class ResetPasswordController extends Controller
         );
 
         return $status === Password::PASSWORD_RESET
-            ? redirect()->route(tenant() ? 'tenant.login' : 'login')
-                ->with('success', 'Password reset successfully!')
-            : back()->withErrors(['email' => [__($status)]]);
+    ? redirect('/login')
+        ->with('success', 'Password reset successfully!')
+    : back()->withErrors(['email' => [__($status)]]);
     }
 }

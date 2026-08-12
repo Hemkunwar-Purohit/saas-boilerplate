@@ -36,7 +36,7 @@
                 <tr>
                     <td class="px-5 py-3">
                         <p class="font-medium">{{ $tenant->name }}</p>
-                        <p class="text-xs text-gray-500">{{ $tenant->id }}.localhost</p>
+                        <p class="text-xs text-gray-500">{{ $tenant->id }}.{{ config('app.domain') }}</p>
                     </td>
                     <td class="px-5 py-3 text-xs">
                         <span class="px-2 py-0.5 rounded-full bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400">

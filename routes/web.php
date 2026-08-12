@@ -9,7 +9,17 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
 use App\Http\Controllers\Admin\TenantController;
 
-Route::get('/', fn() => view('landing'))->name('home');
+Route::get('/', function () {
+    if (tenancy()->initialized) {
+        if (auth()->guard('web')->check()) {
+            return redirect('/dashboard');
+        }
+
+        return redirect('/login');
+    }
+
+    return view('landing');
+})->name('home');
 Route::get('/register', [RegisterController::class, 'showForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
